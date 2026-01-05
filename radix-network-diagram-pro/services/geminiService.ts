@@ -2,7 +2,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { DiagramType } from "../types";
 
-const MODEL_NAME = 'gemini-3-pro-image-preview';
+const MODEL_NAME = 'gemini-2.0-flash-exp';
 
 /**
  * 画像のリサイズ処理
@@ -36,7 +36,7 @@ export const generateNetworkDiagram = async (
   type: DiagramType,
   variant: number
 ): Promise<string> => {
-  const apiKey = process.env.API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error("APIキーが設定されていません。");
 
   const ai = new GoogleGenAI({ apiKey });
@@ -106,7 +106,7 @@ export const editNetworkDiagram = async (
   editInstructions: string,
   type: DiagramType
 ): Promise<string> => {
-  const apiKey = process.env.API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error("APIキーが設定されていません。");
 
   const ai = new GoogleGenAI({ apiKey });
