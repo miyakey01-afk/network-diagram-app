@@ -362,7 +362,7 @@ const App: React.FC = () => {
           <div className="h-4 w-px bg-white/10"></div>
           <div className="flex gap-4">
             <span className="text-[9px] font-bold text-blue-400">AI AGENT ACTIVE</span>
-            <span className="text-[9px] font-bold text-slate-400 uppercase">Gemini 3 Pro Engine</span>
+            <span className="text-[9px] font-bold text-slate-400 uppercase">Gemini 2.0 Flash Engine</span>
           </div>
         </div>
       </footer>
